@@ -1,2 +1,39 @@
-<h1>Inventories#index</h1>
-<p>Find me in app/views/inventories/index.html.erb</p>
+<h1>Here is the current inventory</h1>
+
+<% if @inventories.blank?%>
+
+<em>There is nothing to show.</em>
+
+<% else %>
+
+<table>
+  <thead>
+    <tr>
+      <th>PID:</th>
+      <th>Item:</th>
+      <th>Description:</th>
+      <th>Price:</th>
+      <th>Condition:</th>
+      <th>Dimension Width:</th>
+      <th>Dimension Length:</th>
+      <th>Dimension Height:</th>
+    </tr>
+  </thead>
+
+  <% @inventories.each do |inventory| %>
+   <tr>
+      <td><%= inventory.pid %></td>
+      <td><%= inventory.item %></td>
+      <td><%= inventory.description %>></td>
+      <td><%= invnetory.price %>></td>
+      <td><%= inventory.condition %></td>
+      <td><%= inventory.dimension_w %></td>
+      <td><%= invnetory.dimension_l %></td>
+      <td><%= inventory.dimension_h %></td>
+    </tr>
+  <% end %>
+  <tbody>
+  </tbody>
+</table>
+
+<% end %>
