@@ -1,12 +1,9 @@
-<h1>Here is the current inventory</h1>
-
-<% if @inventories.blank?%>
-
-<em>There is nothing to show.</em>
-
-<% else %>
+<%# main page %>
+<h1>Welcome to Faust Furniture!</h1>
+<h3>Click here to view the current inventory</h3>
 
 <table>
+
   <thead>
     <tr>
       <th>PID:</th>
@@ -20,20 +17,18 @@
     </tr>
   </thead>
 
+<tbody>
   <% @inventories.each do |inventory| %>
    <tr>
       <td><%= inventory.pid %></td>
       <td><%= inventory.item %></td>
       <td><%= inventory.description %>></td>
-      <td><%= invnetory.price %>></td>
+      <td><%= inventory.price %></td>
       <td><%= inventory.condition %></td>
       <td><%= inventory.dimension_w %></td>
-      <td><%= invnetory.dimension_l %></td>
+      <td><%= inventory.dimension_l %></td>
       <td><%= inventory.dimension_h %></td>
     </tr>
   <% end %>
-  <tbody>
   </tbody>
 </table>
-
-<% end %>

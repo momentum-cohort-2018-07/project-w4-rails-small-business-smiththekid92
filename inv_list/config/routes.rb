@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  # get 'inventories/index'
 
   root 'inventories#index'
   
-  get 'inventories/:id' => 'inventoires#show'
+  get 'index' => 'inventories#index'
+
+  get 'show' => 'inventories#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
