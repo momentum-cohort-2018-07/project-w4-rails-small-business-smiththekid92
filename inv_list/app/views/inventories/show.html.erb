@@ -1,16 +1,16 @@
 <%# details page %>
-<table>
 
+<h1>Inventory Description</h1>
+
+<%= link_to 'Go Back', index_url %>
+
+<table>
   <thead>
     <tr>
       <th>PID:</th>
       <th>Item:</th>
       <th>Description:</th>
       <th>Price:</th>
-      <th>Condition:</th>
-      <th>Dimension Width:</th>
-      <th>Dimension Length:</th>
-      <th>Dimension Height:</th>
     </tr>
   </thead>
 
@@ -21,10 +21,6 @@
       <td><%= inventory.item %></td>
       <td><%= inventory.description %>></td>
       <td><%= inventory.price %></td>
-      <td><%= inventory.condition %></td>
-      <td><%= inventory.dimension_w %></td>
-      <td><%= inventory.dimension_l %></td>
-      <td><%= inventory.dimension_h %></td>
     </tr>
   <% end %>
   </tbody>
