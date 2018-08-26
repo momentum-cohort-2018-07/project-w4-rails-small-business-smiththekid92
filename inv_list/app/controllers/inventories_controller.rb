@@ -20,6 +20,7 @@ class InventoriesController < ApplicationController
     inventory.dimension_w = row.to_h["dimension_w"]
     inventory.dimension_l = row.to_h["dimension_w"]
     inventory.dimension_h = row.to_h["dimension_l"]
+    inventory.quantity = row.to_h["quantity"]
 
     @inventories << inventory
     end
