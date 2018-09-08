@@ -1,0 +1,32 @@
+<%# main page %>
+<h1>Welcome to Faust Furniture!</h1>
+<%= link_to 'Click Here To View The Current Inventory Description', show_url %>
+
+<table>
+
+  <thead>
+    <tr>
+      <th>PID:</th>
+      <th>Price:</th>
+      <th>Condition:</th>
+      <th>Width:</th>
+      <th>Length:</th>
+      <th>Height:</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+
+<tbody>
+  <% @inventories.each do |inventory| %>
+   <tr>
+      <td><%= inventory.pid %></td> 
+      <td><%= inventory.price %></td>
+      <td><%= inventory.condition %></td>
+      <td><%= inventory.dimension_w %></td>
+      <td><%= inventory.dimension_l %></td>
+      <td><%= inventory.dimension_h %></td>
+      <td><%= inventory.quantity %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<%# details page %>
+
+<h1>Inventory Description</h1>
+
+<%= link_to 'Go Back', index_url %>
+
+<table>
+  <thead>
+    <tr>
+      <th>PID:</th>
+      <th>Item:</th>
+      <th>Description:</th>
+      <th>Price:</th>
+      <th>Condition:</th>
+    </tr>
+  </thead>
+
+<tbody>
+  <% @inventories.each do |inventory| %>
+   <tr>
+      <td><%= inventory.pid %></td>
+      <td><%= inventory.item %></td>
+      <td><%= inventory.description %>></td>
+      <td><%= inventory.price %></td>
+      <td><%= inventory.condition %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
